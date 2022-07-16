@@ -16,39 +16,39 @@
 
 <body class="flex justify-end">
   <button
-    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300 transition-container"
+    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300 transition-container py-1.5 px-4"
     on:click={toggleTheme}
   >
     {#if theme}
       <div transition:fade>
-        <Icon name="sun" class="h-5 w-5 m-3.5" />
+        <Icon name="sun" class="h-5 w-5" />
       </div>
     {:else}
       <div transition:fade>
-        <Icon name="moon" class="h-5 w-5 m-3.5" />
+        <Icon name="moon" class="h-5 w-5" />
       </div>
     {/if}</button
   >
-  <button class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300">
-    <Icon name="cog" class="h-5 w-5 m-3.5" /></button
+  <button class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300 py-1.5 px-4">
+    <Icon name="cog" class="h-5 w-5" /></button
   >
   <button
-    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300"
+    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300 py-2 px-4"
     on:click={appWindow.minimize}
   >
-    <Icon name="minimize" class="h-4 w-4 m-4" /></button
+    <Icon name="minimize" class="h-4 w-4" /></button
   >
   <button
-    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300"
+    class="w-fit h-fit hover:bg-zinc-800 hover:text-zinc-300 py-2 px-4"
     on:click={appWindow.toggleMaximize}
   >
-    <Icon name="maximize" class="h-4 w-4 m-4" /></button
+    <Icon name="maximize" class="h-4 w-4" /></button
   >
   <button
-    class="w-fit h-fit bg-red-700 hover:bg-red-800 hover:text-zinc-300"
+    class="w-fit h-fit bg-red-700 hover:bg-red-800 hover:text-zinc-300 py-2 px-4"
     on:click={appWindow.close}
   >
-    <Icon name="x" class="h-4 w-4 m-4" /></button
+    <Icon name="x" class="h-4 w-4" /></button
   >
 </body>
 
