@@ -7,8 +7,7 @@ This is essentially a react-ts and tauri template but with a folder structure i 
 
 Have npm and rust installed and then install tauri-cli and cargo-commander:
 ```bash
-cargo install cargo-commander
-cargo install tauri-cli --locked --version ^1.0.0-rc 
+cargo install cargo-commander tauri-cli
 ```
 
 Now run the setup script:
