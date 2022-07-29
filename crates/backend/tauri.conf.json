@@ -1,9 +1,10 @@
 {
   "build": {
-    "devPath": "http://localhost:5173",
-    "beforeDevCommand": "cd frontend && pnpm dev",
+    "devPath": "http://localhost:8080",
+    "beforeDevCommand": "cd frontend && trunk serve",
     "distDir": "../frontend/dist",
-    "beforeBuildCommand": "cd frontend && pnpm build"
+    "beforeBuildCommand": "cd frontend && trunk build",
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "template",

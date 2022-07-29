@@ -1,7 +1,7 @@
 
-# Tauri React Template
+# Tauri Yew Template
 
-This is essentially a react-ts and tauri template but with a folder structure i prefer more.
+This is essentially a yew and tauri template but with a folder structure i prefer more.
 
 ## Installation
 
@@ -15,7 +15,7 @@ Now run the setup script:
 ```bash
 cargo cmd setup
 ```
-This installs pnpm (your hardrive will thank me later) and installs node dependencies
+This installs trunk and wasm-32 and installs node dependencies
 ## Run Locally
 
 Follow the installation guide and then simply run:
@@ -40,14 +40,15 @@ root > crates > [
         Cargo.toml, tauri.conf.json
     ],
     frontend > [
-        index.html, package.json
+        index.html,
+        src > main.rs
     ]
 ]
 ```
 ## Acknowledgements
 
  - [Original Template (how-do-you)](https://github.com/how-do-you/banan)
-
+ - [Yew Tauri Guide](https://dev.to/stevepryde/create-a-desktop-app-in-rust-using-tauri-and-yew-2bhe)
 
 ## License
 

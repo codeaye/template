@@ -2,6 +2,13 @@
 name = "app"
 default-run = "app"
 version = "0.1.0"
+description = "A Tauri App"
+authors = ["codeaye"]
+license = "MIT"
+
+edition = "2021"
+rust-version = "1.57"
+
 
 [build-dependencies]
 tauri-build = { version = "1.0.4", features = [] }
@@ -13,5 +20,5 @@ tauri = { version = "1.0.5", features = ["api-all"] }
 tauri-plugin-window-state = "0.1"
 
 [features]
-default = [ "custom-protocol" ]
-custom-protocol = [ "tauri/custom-protocol" ]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

@@ -4,6 +4,6 @@ tauri = { cmd = "cargo tauri dev", working_dir = "crates/backend" }
 tauri = { cmd = "cargo tauri build", working_dir = "crates/backend" }
 [setup]
 node = { cmd = [
-    { cmd = "npm i -g pnp --silent", working_dir = "crates/frontend" },
-    { cmd = "pnpm i", working_dir = "crates/frontend" },
+    { cmd = "rustup target add wasm32-unknown-unknown", working_dir = "crates/frontend" },
+    { cmd = "cargo install trunk wasm-bindgen-cli", working_dir = "crates/frontend" },
 ] }
