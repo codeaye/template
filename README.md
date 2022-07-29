@@ -32,6 +32,18 @@ cargo cmd build
 ```
 
 
+## Stuff you should change 
+```
+root > cargo.toml
+root > crates > [
+    backend > [
+        Cargo.toml, tauri.conf.json
+    ],
+    frontend > [
+        index.html, package.json
+    ]
+]
+```
 ## Acknowledgements
 
  - [Original Template (how-do-you)](https://github.com/how-do-you/banan)
