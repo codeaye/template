@@ -1,10 +1,9 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
-    "distDir": "../dist",
-    "devPath": "http://localhost:5173"
+    "devPath": "http://localhost:5173",
+    "beforeDevCommand": "cd frontend && pnpm dev",
+    "distDir": "../frontend/dist",
+    "beforeBuildCommand": "cd frontend && pnpm build"
   },
   "package": {
     "productName": "template",
@@ -29,9 +28,11 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.nav.dev",
+      "identifier": "com.tauri.dev",
       "shortDescription": "",
       "longDescription": "",
+      "resources": [],
+      "targets": "all",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -39,8 +40,6 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
-      "targets": "all",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
@@ -58,9 +57,8 @@
         "title": "Template",
         "width": 800,
         "height": 600,
-        "resizable": true,
         "fullscreen": false,
-        "decorations": false
+        "resizable": true
       }
     ]
   }

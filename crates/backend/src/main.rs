@@ -5,6 +5,7 @@
 
 fn main() {
   tauri::Builder::default()
+  .plugin(tauri_plugin_window_state::Builder::default().build())
     .run(tauri::generate_context!())
-    .expect("Error while running tauri application");
+    .expect("There was an error while running tauri application");
 }

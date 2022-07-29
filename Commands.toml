@@ -1,0 +1,5 @@
+[dev]
+tauri = { cmd = "cargo tauri dev", working_dir = "crates/backend" }
+
+[build]
+tauri = { cmd = "cargo tauri build", working_dir = "crates/backend" }
