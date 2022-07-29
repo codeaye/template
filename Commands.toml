@@ -1,8 +1,9 @@
 [dev]
 tauri = { cmd = "cargo tauri dev", working_dir = "crates/backend" }
-
 [build]
 tauri = { cmd = "cargo tauri build", working_dir = "crates/backend" }
-
 [setup]
-node = { cmd = "pnpm i", working_dir = "crates/frontend"}
+node = { cmd = [
+    { cmd = "npm i -g pnp --silent", working_dir = "crates/frontend" },
+    { cmd = "pnpm i", working_dir = "crates/frontend" },
+] }

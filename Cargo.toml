@@ -1,3 +1,15 @@
+[package]
+name = "template"
+version = "0.1.0"
+description = "A Tauri App"
+readme = "README.md"
+authors = ["codeaye"]
+license = "MIT"
+repository = "https://github.com/codeaye/template/"
+
+edition = "2021"
+rust-version = "1.57"
+
 [workspace]
 members = [
     "crates/backend"
