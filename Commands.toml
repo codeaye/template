@@ -3,3 +3,6 @@ tauri = { cmd = "cargo tauri dev", working_dir = "crates/backend" }
 
 [build]
 tauri = { cmd = "cargo tauri build", working_dir = "crates/backend" }
+
+[setup]
+node = { cmd = "pnpm i", working_dir = "crates/frontend"}
