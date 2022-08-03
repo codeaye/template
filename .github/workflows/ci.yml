@@ -42,7 +42,7 @@ jobs:
         run: cd crates/frontend && yarn && cd .. && cd ..
 
       - name: Build the app
-        run: cd crates/backend && cargo tauri build
+        run: cargo tauri build
 
       - name: Build windows files
         uses: softprops/action-gh-release@v1
