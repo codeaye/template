@@ -57,4 +57,3 @@ jobs:
           files: |
             target/release/bundle/dmg/*.dmg
             target/release/bundle/macos/*.app
-            LICENSE
