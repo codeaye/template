@@ -1,9 +1,9 @@
 name: "Build And Release"
 on:
+  workflow_dispatch:
   push:
-    branches: ["release"]
-  pull_request:
-    branches: ["release"]
+    tags:
+      - "v*"
 
 jobs:
   publish-tauri:
@@ -53,7 +53,7 @@ jobs:
             target/release/bundle/deb/*.deb
             LICENSE
 
-      - name: Build macOS DMG file
+      - name: Build mac files
         uses: softprops/action-gh-release@v1
         if: matrix.platform == 'macos-latest'
         with:
