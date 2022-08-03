@@ -14,7 +14,6 @@ Now run the setup script:
 ```bash
 cargo cmd setup
 ```
-This installs pnpm (your hardrive will thank me later) and installs node dependencies
 ## Run Locally
 
 Follow the installation guide and then simply run:

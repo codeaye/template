@@ -1,9 +1,9 @@
 {
   "build": {
     "devPath": "http://localhost:5173",
-    "beforeDevCommand": "cd frontend && pnpm dev",
+    "beforeDevCommand": "cd frontend && yarn dev",
     "distDir": "../frontend/dist",
-    "beforeBuildCommand": "cd frontend && pnpm build"
+    "beforeBuildCommand": "cd frontend && yarn build"
   },
   "package": {
     "productName": "template",
