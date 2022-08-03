@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-latest]
+        platform: [macos-latest, ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -36,7 +36,10 @@ jobs:
           sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf
 
       - name: Install tauri cli
-        run: cargo install tauri-cli
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: tauri-cli
+          version: latest
 
       - name: Install app dependencies and build it
         run: cd crates/frontend && yarn && cd .. && cd ..
@@ -44,7 +47,7 @@ jobs:
       - name: Build the app
         run: cargo tauri build
 
-      - name: Build windows files
+      - name: Publish ubuntu files
         uses: softprops/action-gh-release@v1
         if: matrix.platform == 'ubuntu-latest'
         with:
@@ -53,10 +56,17 @@ jobs:
             target/release/bundle/deb/*.deb
             LICENSE
 
-      - name: Build mac files
+      - name: Publish mac files
         uses: softprops/action-gh-release@v1
         if: matrix.platform == 'macos-latest'
         with:
           files: |
             target/release/bundle/dmg/*.dmg
             target/release/bundle/macos/*.app
+
+      - name: Publish windows files
+        uses: softprops/action-gh-release@v1
+        if: matrix.platform == 'windows-latest'
+        with:
+          files: |
+            target/release/bundle/msi/*.msi
