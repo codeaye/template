@@ -44,7 +44,7 @@ jobs:
       - name: Build the app
         run: cd crates/backend && cargo tauri build
 
-      - name: Release
+      - name: Build windows files
         uses: softprops/action-gh-release@v1
         if: matrix.platform == 'ubuntu-latest'
         with:
@@ -52,6 +52,9 @@ jobs:
             target/release/bundle/appimage/*.AppImage
             target/release/bundle/deb/*.deb
             LICENSE
+
+      - name: Build macOS DMG file
+        uses: softprops/action-gh-release@v1
         if: matrix.platform == 'macos-latest'
         with:
           files: |
