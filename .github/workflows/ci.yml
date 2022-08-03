@@ -40,6 +40,7 @@ jobs:
         with:
           crate: tauri-cli
           version: latest
+          use-tool-cache: true
 
       - name: Install app dependencies and build it
         run: cd crates/frontend && yarn && cd .. && cd ..
