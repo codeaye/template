@@ -28,7 +28,13 @@ To build your app run:
 ```bash
 cargo cmd build
 ```
+## Publish
 
+To publish your app, on github go to releases and create a release and a tag with the tagname starting with 
+```
+v*
+```
+and the ci should start building the app for ubuntu, mac, and windows and add it to the release
 
 ## Stuff you should change 
 ```
